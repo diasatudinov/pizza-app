@@ -9,21 +9,25 @@
 /* Begin PBXBuildFile section */
 		2B6C88182B51D46C0090BBC0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88172B51D46C0090BBC0 /* AppDelegate.swift */; };
 		2B6C881A2B51D46C0090BBC0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88192B51D46C0090BBC0 /* SceneDelegate.swift */; };
-		2B6C881C2B51D46C0090BBC0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C881B2B51D46C0090BBC0 /* ViewController.swift */; };
-		2B6C881F2B51D46C0090BBC0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C881D2B51D46C0090BBC0 /* Main.storyboard */; };
 		2B6C88212B51D46E0090BBC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C88202B51D46E0090BBC0 /* Assets.xcassets */; };
 		2B6C88242B51D46E0090BBC0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C88222B51D46E0090BBC0 /* LaunchScreen.storyboard */; };
+		2B6C88312B51D7390090BBC0 /* MainMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88302B51D7390090BBC0 /* MainMenuView.swift */; };
+		2B6C88342B51D7A90090BBC0 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88332B51D7A90090BBC0 /* Builder.swift */; };
+		2B6C88372B51DB7B0090BBC0 /* MainMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88362B51DB7B0090BBC0 /* MainMenuPresenter.swift */; };
+		2B6C883D2B51DCB90090BBC0 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C883C2B51DCB90090BBC0 /* TabBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B6C88142B51D46C0090BBC0 /* pizza app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "pizza app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B6C88172B51D46C0090BBC0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B6C88192B51D46C0090BBC0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2B6C881B2B51D46C0090BBC0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2B6C881E2B51D46C0090BBC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B6C88202B51D46E0090BBC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B6C88232B51D46E0090BBC0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B6C88252B51D46E0090BBC0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B6C88302B51D7390090BBC0 /* MainMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuView.swift; sourceTree = "<group>"; };
+		2B6C88332B51D7A90090BBC0 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
+		2B6C88362B51DB7B0090BBC0 /* MainMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPresenter.swift; sourceTree = "<group>"; };
+		2B6C883C2B51DCB90090BBC0 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,105 @@
 		2B6C88162B51D46C0090BBC0 /* pizza app */ = {
 			isa = PBXGroup;
 			children = (
-				2B6C88172B51D46C0090BBC0 /* AppDelegate.swift */,
-				2B6C88192B51D46C0090BBC0 /* SceneDelegate.swift */,
-				2B6C881B2B51D46C0090BBC0 /* ViewController.swift */,
-				2B6C881D2B51D46C0090BBC0 /* Main.storyboard */,
+				2B6C88352B51D92D0090BBC0 /* Common */,
+				2B6C88322B51D7870090BBC0 /* Builder */,
+				2B6C882B2B51D6750090BBC0 /* Module */,
 				2B6C88202B51D46E0090BBC0 /* Assets.xcassets */,
 				2B6C88222B51D46E0090BBC0 /* LaunchScreen.storyboard */,
 				2B6C88252B51D46E0090BBC0 /* Info.plist */,
 			);
 			path = "pizza app";
+			sourceTree = "<group>";
+		};
+		2B6C882B2B51D6750090BBC0 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C88382B51DC1E0090BBC0 /* TabBarModule */,
+				2B6C882C2B51D6820090BBC0 /* MainMenuModule */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		2B6C882C2B51D6820090BBC0 /* MainMenuModule */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C882F2B51D6C70090BBC0 /* Presenter */,
+				2B6C882E2B51D6BC0090BBC0 /* View */,
+				2B6C882D2B51D6B50090BBC0 /* Model */,
+			);
+			path = MainMenuModule;
+			sourceTree = "<group>";
+		};
+		2B6C882D2B51D6B50090BBC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6C882E2B51D6BC0090BBC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C88302B51D7390090BBC0 /* MainMenuView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6C882F2B51D6C70090BBC0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C88362B51DB7B0090BBC0 /* MainMenuPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2B6C88322B51D7870090BBC0 /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C88332B51D7A90090BBC0 /* Builder.swift */,
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		2B6C88352B51D92D0090BBC0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C88172B51D46C0090BBC0 /* AppDelegate.swift */,
+				2B6C88192B51D46C0090BBC0 /* SceneDelegate.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		2B6C88382B51DC1E0090BBC0 /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C883B2B51DC550090BBC0 /* Presenter */,
+				2B6C883A2B51DC510090BBC0 /* View */,
+				2B6C88392B51DC450090BBC0 /* Model */,
+			);
+			path = TabBarModule;
+			sourceTree = "<group>";
+		};
+		2B6C88392B51DC450090BBC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6C883A2B51DC510090BBC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C883C2B51DCB90090BBC0 /* TabBarView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6C883B2B51DC550090BBC0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,7 +221,6 @@
 			files = (
 				2B6C88242B51D46E0090BBC0 /* LaunchScreen.storyboard in Resources */,
 				2B6C88212B51D46E0090BBC0 /* Assets.xcassets in Resources */,
-				2B6C881F2B51D46C0090BBC0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,23 +231,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B6C881C2B51D46C0090BBC0 /* ViewController.swift in Sources */,
+				2B6C88312B51D7390090BBC0 /* MainMenuView.swift in Sources */,
+				2B6C88372B51DB7B0090BBC0 /* MainMenuPresenter.swift in Sources */,
 				2B6C88182B51D46C0090BBC0 /* AppDelegate.swift in Sources */,
 				2B6C881A2B51D46C0090BBC0 /* SceneDelegate.swift in Sources */,
+				2B6C883D2B51DCB90090BBC0 /* TabBarView.swift in Sources */,
+				2B6C88342B51D7A90090BBC0 /* Builder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		2B6C881D2B51D46C0090BBC0 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2B6C881E2B51D46C0090BBC0 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		2B6C88222B51D46E0090BBC0 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -297,9 +385,9 @@
 				INFOPLIST_FILE = "pizza app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,9 +413,9 @@
 				INFOPLIST_FILE = "pizza app/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
