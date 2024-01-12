@@ -7,11 +7,24 @@
 
 import UIKit
 
-class TabBarView: UITabBarController {
+protocol TabBarViewProtocol: AnyObject{
+    func setControllers(controllers: [UIViewController])
+}
 
+class TabBarView: UITabBarController {
+    
+    var presenter: TabBarViewPresenter!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+}
+
+extension TabBarView: TabBarViewProtocol{
+    func setControllers(controllers: [UIViewController]) {
+        setViewControllers(controllers, animated: true)
     }
 }

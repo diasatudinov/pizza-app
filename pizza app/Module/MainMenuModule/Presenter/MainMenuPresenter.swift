@@ -7,10 +7,19 @@
 
 import UIKit
 
-protocol MainMenuPresenterProtocol {
+protocol MainMenuPresenterProtocol: AnyObject {
+    init(view: MainMenuViewProtocol)
     
 }
 
-class MainMenuPresenter: MainMenuPresenterProtocol{
+class MainMenuPresenter {
+    weak var view: MainMenuViewProtocol?
+    
+    required init(view: MainMenuViewProtocol) {
+        self.view = view
+    }
+}
+
+extension MainMenuPresenter: MainMenuPresenterProtocol {
     
 }

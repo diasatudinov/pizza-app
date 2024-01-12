@@ -7,11 +7,21 @@
 
 import UIKit
 
+protocol MainMenuViewProtocol: AnyObject {
+    
+}
+
 class MainMenuView: UIViewController {
 
+    var presenter: MainMenuPresenterProtocol!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .blue
     }
      
+}
+
+extension MainMenuView: MainMenuViewProtocol {
+    
 }

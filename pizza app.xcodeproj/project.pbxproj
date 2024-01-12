@@ -15,6 +15,10 @@
 		2B6C88342B51D7A90090BBC0 /* Builder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88332B51D7A90090BBC0 /* Builder.swift */; };
 		2B6C88372B51DB7B0090BBC0 /* MainMenuPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88362B51DB7B0090BBC0 /* MainMenuPresenter.swift */; };
 		2B6C883D2B51DCB90090BBC0 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C883C2B51DCB90090BBC0 /* TabBarView.swift */; };
+		2B6C883F2B51DDB10090BBC0 /* TabBarViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C883E2B51DDB10090BBC0 /* TabBarViewPresenter.swift */; };
+		2B6C88452B51E5650090BBC0 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88442B51E5650090BBC0 /* ContactsView.swift */; };
+		2B6C884B2B51E5B90090BBC0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C884A2B51E5B90090BBC0 /* ProfileView.swift */; };
+		2B6C88512B51E5F90090BBC0 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88502B51E5F90090BBC0 /* BasketView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		2B6C88332B51D7A90090BBC0 /* Builder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Builder.swift; sourceTree = "<group>"; };
 		2B6C88362B51DB7B0090BBC0 /* MainMenuPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuPresenter.swift; sourceTree = "<group>"; };
 		2B6C883C2B51DCB90090BBC0 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		2B6C883E2B51DDB10090BBC0 /* TabBarViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewPresenter.swift; sourceTree = "<group>"; };
+		2B6C88442B51E5650090BBC0 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
+		2B6C884A2B51E5B90090BBC0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		2B6C88502B51E5F90090BBC0 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,8 +81,11 @@
 		2B6C882B2B51D6750090BBC0 /* Module */ = {
 			isa = PBXGroup;
 			children = (
-				2B6C88382B51DC1E0090BBC0 /* TabBarModule */,
+				2B6C884C2B51E5D30090BBC0 /* BasketModule */,
+				2B6C88462B51E5770090BBC0 /* ProfileModule */,
+				2B6C88402B51E51B0090BBC0 /* ContactsModule */,
 				2B6C882C2B51D6820090BBC0 /* MainMenuModule */,
+				2B6C88382B51DC1E0090BBC0 /* TabBarModule */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -157,6 +168,103 @@
 		2B6C883B2B51DC550090BBC0 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				2B6C883E2B51DDB10090BBC0 /* TabBarViewPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2B6C88402B51E51B0090BBC0 /* ContactsModule */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C88432B51E5370090BBC0 /* Presenter */,
+				2B6C88422B51E5310090BBC0 /* View */,
+				2B6C88412B51E52B0090BBC0 /* Model */,
+			);
+			path = ContactsModule;
+			sourceTree = "<group>";
+		};
+		2B6C88412B51E52B0090BBC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6C88422B51E5310090BBC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C88442B51E5650090BBC0 /* ContactsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6C88432B51E5370090BBC0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2B6C88462B51E5770090BBC0 /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C88492B51E5980090BBC0 /* Presenter */,
+				2B6C88482B51E5930090BBC0 /* View */,
+				2B6C88472B51E5890090BBC0 /* Model */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		2B6C88472B51E5890090BBC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6C88482B51E5930090BBC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C884A2B51E5B90090BBC0 /* ProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6C88492B51E5980090BBC0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2B6C884C2B51E5D30090BBC0 /* BasketModule */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C884F2B51E5E50090BBC0 /* Presenter */,
+				2B6C884E2B51E5E20090BBC0 /* View */,
+				2B6C884D2B51E5DC0090BBC0 /* Model */,
+			);
+			path = BasketModule;
+			sourceTree = "<group>";
+		};
+		2B6C884D2B51E5DC0090BBC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2B6C884E2B51E5E20090BBC0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C88502B51E5F90090BBC0 /* BasketView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B6C884F2B51E5E50090BBC0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -231,12 +339,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6C88512B51E5F90090BBC0 /* BasketView.swift in Sources */,
+				2B6C883F2B51DDB10090BBC0 /* TabBarViewPresenter.swift in Sources */,
 				2B6C88312B51D7390090BBC0 /* MainMenuView.swift in Sources */,
 				2B6C88372B51DB7B0090BBC0 /* MainMenuPresenter.swift in Sources */,
 				2B6C88182B51D46C0090BBC0 /* AppDelegate.swift in Sources */,
 				2B6C881A2B51D46C0090BBC0 /* SceneDelegate.swift in Sources */,
 				2B6C883D2B51DCB90090BBC0 /* TabBarView.swift in Sources */,
+				2B6C884B2B51E5B90090BBC0 /* ProfileView.swift in Sources */,
 				2B6C88342B51D7A90090BBC0 /* Builder.swift in Sources */,
+				2B6C88452B51E5650090BBC0 /* ContactsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
