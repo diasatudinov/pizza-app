@@ -10,12 +10,12 @@ import UIKit
 protocol TabBarViewPresenterProtocol: AnyObject {
     init(view: TabBarViewProtocol)
     func buildTabBar()
+     
 }
 
 class TabBarViewPresenter{
     //MARK: variables
     weak var view: TabBarViewProtocol?
-    
     //MARK: functions
     required init(view: TabBarViewProtocol) {
         self.view = view
@@ -23,9 +23,12 @@ class TabBarViewPresenter{
     }
     
     
+    
+    
 }
 
 extension TabBarViewPresenter: TabBarViewPresenterProtocol {
+    
     func buildTabBar() {
         let mainMenu = Builder.createMainMenuController()
         let contacts = Builder.createContactsController()
