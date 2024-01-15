@@ -12,6 +12,7 @@ class ContactsView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .yellow
+        title = "Контакты"
 
     }
 

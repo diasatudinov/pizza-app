@@ -19,6 +19,10 @@
 		2B6C88452B51E5650090BBC0 /* ContactsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88442B51E5650090BBC0 /* ContactsView.swift */; };
 		2B6C884B2B51E5B90090BBC0 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C884A2B51E5B90090BBC0 /* ProfileView.swift */; };
 		2B6C88512B51E5F90090BBC0 /* BasketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88502B51E5F90090BBC0 /* BasketView.swift */; };
+		2B6C88532B540A120090BBC0 /* PositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88522B540A120090BBC0 /* PositionCell.swift */; };
+		2B6C88552B542ACD0090BBC0 /* MainMenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88542B542ACC0090BBC0 /* MainMenuModel.swift */; };
+		2B6C88582B5439490090BBC0 /* UIApplication + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88572B5439490090BBC0 /* UIApplication + ext.swift */; };
+		2B6C885A2B546C310090BBC0 /* UIView + ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C88592B546C310090BBC0 /* UIView + ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		2B6C88442B51E5650090BBC0 /* ContactsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsView.swift; sourceTree = "<group>"; };
 		2B6C884A2B51E5B90090BBC0 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		2B6C88502B51E5F90090BBC0 /* BasketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketView.swift; sourceTree = "<group>"; };
+		2B6C88522B540A120090BBC0 /* PositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCell.swift; sourceTree = "<group>"; };
+		2B6C88542B542ACC0090BBC0 /* MainMenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuModel.swift; sourceTree = "<group>"; };
+		2B6C88572B5439490090BBC0 /* UIApplication + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication + ext.swift"; sourceTree = "<group>"; };
+		2B6C88592B546C310090BBC0 /* UIView + ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +76,7 @@
 		2B6C88162B51D46C0090BBC0 /* pizza app */ = {
 			isa = PBXGroup;
 			children = (
+				2B6C88562B5439210090BBC0 /* Extension */,
 				2B6C88352B51D92D0090BBC0 /* Common */,
 				2B6C88322B51D7870090BBC0 /* Builder */,
 				2B6C882B2B51D6750090BBC0 /* Module */,
@@ -103,6 +112,7 @@
 		2B6C882D2B51D6B50090BBC0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2B6C88542B542ACC0090BBC0 /* MainMenuModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -111,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				2B6C88302B51D7390090BBC0 /* MainMenuView.swift */,
+				2B6C88522B540A120090BBC0 /* PositionCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -269,6 +280,15 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		2B6C88562B5439210090BBC0 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C88572B5439490090BBC0 /* UIApplication + ext.swift */,
+				2B6C88592B546C310090BBC0 /* UIView + ext.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -339,6 +359,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6C88532B540A120090BBC0 /* PositionCell.swift in Sources */,
 				2B6C88512B51E5F90090BBC0 /* BasketView.swift in Sources */,
 				2B6C883F2B51DDB10090BBC0 /* TabBarViewPresenter.swift in Sources */,
 				2B6C88312B51D7390090BBC0 /* MainMenuView.swift in Sources */,
@@ -346,7 +367,10 @@
 				2B6C88182B51D46C0090BBC0 /* AppDelegate.swift in Sources */,
 				2B6C881A2B51D46C0090BBC0 /* SceneDelegate.swift in Sources */,
 				2B6C883D2B51DCB90090BBC0 /* TabBarView.swift in Sources */,
+				2B6C885A2B546C310090BBC0 /* UIView + ext.swift in Sources */,
+				2B6C88582B5439490090BBC0 /* UIApplication + ext.swift in Sources */,
 				2B6C884B2B51E5B90090BBC0 /* ProfileView.swift in Sources */,
+				2B6C88552B542ACD0090BBC0 /* MainMenuModel.swift in Sources */,
 				2B6C88342B51D7A90090BBC0 /* Builder.swift in Sources */,
 				2B6C88452B51E5650090BBC0 /* ContactsView.swift in Sources */,
 			);
