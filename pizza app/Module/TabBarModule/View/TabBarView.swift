@@ -25,6 +25,7 @@ class TabBarView: UITabBarController {
             
             view.addSubview(tabButton)
         }
+        
     }
     
     lazy var selectedItem = UIAction { [weak self] sender in

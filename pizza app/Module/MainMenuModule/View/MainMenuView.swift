@@ -13,16 +13,24 @@ protocol MainMenuViewProtocol: AnyObject {
 
 class MainMenuView: UIViewController {
 
+    private var isPizza = false
+    private var isCombo = false
+    private var isDesrt = false
+    private var isDrink = false
+    private var previousContentOffsetY: CGFloat = 0
+
     var presenter: MainMenuPresenterProtocol!
     private let images: [UIImage] = [.banner, .banner2]
+    private let categories: [String] = ["Пицца","Комбо","Десерты","Напитки"]
     private var topInsets: CGFloat = 0
     private var topMenuViewHeight = UIApplication.topSafeArea + 250
     
     private lazy var topMenuView: UIView = {
         $0.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: topMenuViewHeight)
         $0.layer.backgroundColor = UIColor(red: 0.953, green: 0.961, blue: 0.976, alpha: 1).cgColor
-        $0.addSubview(categoryName)
         $0.addSubview(bannersScrollView)
+        $0.addSubview(categoriesScrollView)
+        
         return $0
     }(UIView())
     
@@ -54,7 +62,17 @@ class MainMenuView: UIViewController {
         $0.frame = view.bounds
         $0.contentSize = CGSize(width: view.bounds.width * CGFloat(images.count), height: 112)
         $0.contentInset.top = 40
+
         
+        return $0
+    }(UIScrollView())
+    
+    private lazy var categoriesScrollView: UIScrollView = {
+        $0.isPagingEnabled = true
+        $0.showsHorizontalScrollIndicator = false
+        $0.frame = CGRect(x: 0, y: Int(bannersScrollView.frame.height - 600), width: 375, height: 32)
+        $0.contentSize = CGSize(width: CGFloat(categories.count) * (view.frame.width - 40), height: 32)
+        $0.contentInset.top = 20
         return $0
     }(UIScrollView())
     
@@ -96,9 +114,38 @@ class MainMenuView: UIViewController {
             imageView.contentMode = .scaleAspectFit
             bannersScrollView.addSubview(imageView)
         }
+        
+        for (index, buttonName) in categories.enumerated() {
+            let button = UIButton(type: .system)
+            button.setTitle(buttonName, for: .normal)
+            let buttonWidth = (view.frame.width - 40) / CGFloat(categories.count)
+            button.frame = CGRect(x: (CGFloat(index) * buttonWidth) + 16, y: 0, width: buttonWidth, height: 32)
+            button.layer.cornerRadius = 25
+            button.layer.borderWidth = 1
+            button.layer.borderColor = UIColor(red: 0.992, green: 0.227, blue: 0.412, alpha: 0.4).cgColor
+            button.setTitleColor(UIColor(red: 0.992, green: 0.227, blue: 0.412, alpha: 0.4), for: .normal)
+            button.addTarget(self, action: #selector(buttonTapped(_:)), for: .touchUpInside)
+
+            categoriesScrollView.addSubview(button)
+        }
+        
         view.layer.backgroundColor = UIColor(red: 0.953, green: 0.961, blue: 0.976, alpha: 1).cgColor
+        
     }
-     
+    
+    func scrollToItem(index: Int) {
+        let indexPath = IndexPath(item: index, section: 0)
+        collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
+        
+        showPositions()
+    }
+    
+    @objc func buttonTapped(_ sender: UIButton) {
+        if let title = sender.currentTitle, let index = categories.firstIndex(of: title) {
+            print("Button at index \(index) with title '\(title)' was tapped")
+            
+        }
+    }
 }
 
 extension MainMenuView: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
@@ -118,18 +165,18 @@ extension MainMenuView: UICollectionViewDataSource, UICollectionViewDelegate, UI
         return cell
     }
     
+    
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        let topMenuPosition = scrollView.contentOffset.y + topInsets + 59
+        var topMenuPosition = scrollView.contentOffset.y + topInsets + 59
         
         if topMenuPosition <= 160, topMenuPosition >= 0 {
             topMenuView.frame.origin.y = -topMenuPosition
             self.bannersScrollView.alpha = (160 - topMenuPosition) / 160
         }
+        
+        print(scrollView.contentOffset.y)
+       
     }
-    
-    
-    
-    
 }
 
 extension MainMenuView: MainMenuViewProtocol {
@@ -138,3 +185,5 @@ extension MainMenuView: MainMenuViewProtocol {
     }
     
 }
+
+

@@ -45,7 +45,6 @@ class PositionCell: UICollectionViewCell {
     lazy var priceButton: UIButton = {
         
         $0.frame = CGRect(x: 264, y: 129, width: 87, height: 32)
-        $0.setTitle("Нажми меня", for: .normal)
         $0.layer.borderWidth = 1.0
         $0.layer.borderColor = UIColor(red: 0.992, green: 0.227, blue: 0.412, alpha: 1).cgColor
         $0.setTitleColor(UIColor(red: 0.992, green: 0.227, blue: 0.412, alpha: 1), for: .normal)
