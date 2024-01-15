@@ -132,18 +132,10 @@ class MainMenuView: UIViewController {
         view.layer.backgroundColor = UIColor(red: 0.953, green: 0.961, blue: 0.976, alpha: 1).cgColor
         
     }
-    
-    func scrollToItem(index: Int) {
-        let indexPath = IndexPath(item: index, section: 0)
-        collectionView.scrollToItem(at: indexPath, at: .centeredVertically, animated: true)
-        
-        showPositions()
-    }
-    
+
     @objc func buttonTapped(_ sender: UIButton) {
         if let title = sender.currentTitle, let index = categories.firstIndex(of: title) {
             print("Button at index \(index) with title '\(title)' was tapped")
-            
         }
     }
 }
@@ -167,7 +159,7 @@ extension MainMenuView: UICollectionViewDataSource, UICollectionViewDelegate, UI
     
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        var topMenuPosition = scrollView.contentOffset.y + topInsets + 59
+        let topMenuPosition = scrollView.contentOffset.y + topInsets + 59
         
         if topMenuPosition <= 160, topMenuPosition >= 0 {
             topMenuView.frame.origin.y = -topMenuPosition
